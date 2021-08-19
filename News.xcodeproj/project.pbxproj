@@ -13,6 +13,7 @@
 		796FCEC626CF1A1600D37095 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 796FCEC526CF1A1600D37095 /* Assets.xcassets */; };
 		796FCEC926CF1A1600D37095 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 796FCEC726CF1A1600D37095 /* LaunchScreen.storyboard */; };
 		796FCED226CF1ADD00D37095 /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796FCED126CF1ADD00D37095 /* NewsTableViewController.swift */; };
+		79ED9AD926CF1F4400059BBE /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ED9AD826CF1F4400059BBE /* Article.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		796FCEC826CF1A1600D37095 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		796FCECA26CF1A1600D37095 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		796FCED126CF1ADD00D37095 /* NewsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
+		79ED9AD826CF1F4400059BBE /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		796FCEBB26CF1A1400D37095 /* News */ = {
 			isa = PBXGroup;
 			children = (
+				79ED9AD726CF1F0B00059BBE /* Models */,
 				796FCED026CF1AC400D37095 /* Controllers */,
 				796FCEBC26CF1A1400D37095 /* AppDelegate.swift */,
 				796FCEBE26CF1A1400D37095 /* SceneDelegate.swift */,
@@ -73,6 +76,14 @@
 				796FCED126CF1ADD00D37095 /* NewsTableViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		79ED9AD726CF1F0B00059BBE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				79ED9AD826CF1F4400059BBE /* Article.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,6 +156,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79ED9AD926CF1F4400059BBE /* Article.swift in Sources */,
 				796FCEBD26CF1A1400D37095 /* AppDelegate.swift in Sources */,
 				796FCEBF26CF1A1400D37095 /* SceneDelegate.swift in Sources */,
 				796FCED226CF1ADD00D37095 /* NewsTableViewController.swift in Sources */,

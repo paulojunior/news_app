@@ -10,6 +10,10 @@ import UIKit
 
 class NewsTableViewController: UITableViewController {
     
+    let disposeBah = DisposeBag()
+    
+    private var articles = [Article]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.prefersLargeTitles = true
@@ -26,16 +30,17 @@ class NewsTableViewController: UITableViewController {
                 let request = URLRequest(url: url)
                 return URLSession.shared.rx.data(request: request)
             } . map { data -> [Article]? in
-                return try? JSONDecoder().decode(ArticleList.self, from: data).articles
+                return try? JSONDecoder().decode(ArticlesList.self, from: data).articles
             }.subscribe(onNext: { articles in
                 
                 if let articles = articles {
+                    self?.articles = articles
                     DispatchQueue.main.async {
                         self?.tableView.reloadData()
                     }
                 }
                 
-            })
+            }).disposed(by: disposeBag)
         
     }
 }
